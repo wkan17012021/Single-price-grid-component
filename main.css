@@ -17,6 +17,7 @@ body {
 margin: 5rem auto;
 max-width: 80vw;
 background-color: white;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .community-wrapper {
@@ -47,7 +48,7 @@ h2 {
     padding: 1.5rem 1.25rem 1.25rem;
 }
 
-.subscription-wrapper h2 {
+.subscription-wrapper h2, .why-us-wrapper h2 {
     color: white;
 }
 
@@ -75,5 +76,15 @@ button {
     height: 2.5rem;
     color: white;
     font-weight: 700;
+}
+
+.why-us-wrapper {
+    background-color: rgb(87, 179, 180);
+    padding: 1.5rem 1.25rem 1.25rem;
+}
+
+.why-us-wrapper ul {
+    color: rgb(226, 226, 226);
+    line-height: 1.5rem;
     
 }
