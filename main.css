@@ -1,90 +1,130 @@
-/* ### Primary
-
-- Cyan: hsl(179, 62%, 43%)
-- Bright Yellow: hsl(71, 73%, 54%)
-
-### Neutral
-
-- Light Gray: hsl(204, 43%, 93%)
-- Grayish Blue: hsl(218, 22%, 67%) */
-
-
 body {
-    background-color: hsl(204, 43%, 93%);
+  background-color: hsl(204, 43%, 93%);
 }
 
 .card-wrapper {
-margin: 5rem auto;
-max-width: 80vw;
-background-color: white;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 5rem auto;
+  max-width: 80vw;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
 }
 
 .community-wrapper {
-    padding: 1.5rem 1.25rem 1.75rem;
+  padding: 1.5rem 1.25rem 1.75rem;
 }
 
 h1 {
-    color: hsl(179, 62%, 43%);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1.75rem;
+  color: hsl(179, 62%, 43%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
 }
 h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.75rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.75rem;
 }
 .community-wrapper h2 {
-    color: hsl(71, 73%, 54%);
+  color: hsl(71, 73%, 54%);
 }
 
 .community-wrapper p {
-    color: hsl(218, 22%, 67%);
-    line-height: 1.5rem;
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5rem;
 }
 
 .subscription-wrapper {
-    background-color: hsl(179, 62%, 43%);
-    padding: 1.5rem 1.25rem 1.25rem;
+  background-color: hsl(179, 62%, 43%);
+  padding: 1.5rem 1.25rem 1.25rem;
 }
 
-.subscription-wrapper h2, .why-us-wrapper h2 {
-    color: white;
+.subscription-wrapper h2,
+.why-us-wrapper h2 {
+  color: white;
 }
 
 .subscription-wrapper span:nth-child(2) {
-    color: white;
-    font-size: 2.5rem;
-    padding-right: 1rem;
+  color: white;
+  font-size: 2.5rem;
+  padding-right: 1rem;
 }
 
 .subscription-wrapper span:nth-child(3) {
-    color: hsl(215, 11%, 79%);
-    position: relative;
-    bottom: 8px;
+  color: hsl(215, 11%, 79%);
+  position: relative;
+  bottom: 8px;
 }
 
 .subscription-wrapper p {
-    color: rgb(226, 226, 226);
-    padding: 1rem 0 1.5rem;
+  color: rgb(226, 226, 226);
+  padding: 1rem 0 1.5rem;
 }
 
 button {
-    background-color: hsl(71, 73%, 54%);
-    border-radius: 5px;
-    width: 100%;
-    height: 2.5rem;
-    color: white;
-    font-weight: 700;
+  background: hsl(71, 73%, 54%);
+  background: linear-gradient(to left, hsl(71, 73%, 54%) 50%, white 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+  border-radius: 5px;
+  width: 100%;
+  height: 2.5rem;
+  color: white;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .why-us-wrapper {
-    background-color: rgb(87, 179, 180);
-    padding: 1.5rem 1.25rem 1.25rem;
+  background-color: rgb(87, 179, 180);
+  padding: 1.5rem 1.25rem 1.25rem;
 }
 
 .why-us-wrapper ul {
-    color: rgb(226, 226, 226);
-    line-height: 1.5rem;
-    
+  color: rgb(226, 226, 226);
+  line-height: 1.5rem;
+}
+
+/* media query for tablet screen sizes and above */
+
+@media (min-width: 768px) {
+  .card-wrapper {
+    margin-top: 25vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.75fr 1fr;
+  }
+  h2 {
+    margin-bottom: 1.25rem;
+  }
+  .community-wrapper {
+    grid-area: 1 / 1 / 2 / 5;
+    padding-left: 2rem;
+  }
+  .subscription-wrapper {
+    grid-area: 2 / 1 / 4 / 3;
+    padding: 1.5rem 2rem 1.25rem;
+  }
+  .dollar:hover {
+    cursor: crosshair;
+    border-bottom: 8px solid whitesmoke;
+    transition: 1.2s ease-in-out;
+}
+  button {
+    max-width: 90%;
+  }
+  button:hover {
+    cursor: pointer;
+    transition: 1.2s ease-in-out;
+    background-position: left;
+    color: black;
+  }
+  .why-us-wrapper {
+    grid-area: 2 / 3 / 4 / 5;
+    padding: 1.5rem 2rem 1.25rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  .card-wrapper {
+    max-width: 780px;
+  }
 }
